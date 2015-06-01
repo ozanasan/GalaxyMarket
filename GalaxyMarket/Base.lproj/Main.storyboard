@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6QW-iy-00I">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Galaxy Market-->
+        <scene sceneID="h54-V2-I7e">
+            <objects>
+                <tableViewController id="rQP-SK-Dm8" customClass="GalaxyMarketTableViewController" customModule="GalaxyMarket" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" id="zDY-Hq-fnL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="galaxycell" rowHeight="110" id="xkF-2T-xaN" customClass="GalaxyItemCell" customModule="GalaxyMarket" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xkF-2T-xaN" id="K8S-Fk-p5v">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="240" verticalCompressionResistancePriority="740" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNp-Yl-1O8">
+                                            <rect key="frame" x="110" y="8" width="482" height="89"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <string key="text">Jedi Knights are the most powerful fighters in the galaxy. They can use the force to bend known physical limits for living beings. </string>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Oblique" family="Helvetica" pointSize="9"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v3c-jC-aFh">
+                                            <rect key="frame" x="8" y="8" width="94" height="89"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="94" id="Q1m-9V-acl"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1500$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWZ-S6-aAN">
+                                            <rect key="frame" x="304" y="62" width="95" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="95" id="rdv-9X-7gV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.55131955417820733" green="1" blue="0.97923088869745722" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="UNp-Yl-1O8" firstAttribute="leading" secondItem="v3c-jC-aFh" secondAttribute="trailing" constant="8" id="5nJ-rb-XGl"/>
+                                        <constraint firstItem="v3c-jC-aFh" firstAttribute="leading" secondItem="K8S-Fk-p5v" secondAttribute="leadingMargin" id="GSW-Mr-nuz"/>
+                                        <constraint firstItem="v3c-jC-aFh" firstAttribute="top" secondItem="K8S-Fk-p5v" secondAttribute="topMargin" id="Lqo-5p-hII"/>
+                                        <constraint firstItem="UNp-Yl-1O8" firstAttribute="centerX" secondItem="WWZ-S6-aAN" secondAttribute="centerX" constant="-0.5" id="QLh-mu-h5g"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="v3c-jC-aFh" secondAttribute="bottom" constant="4" id="WAc-Gd-3Yy"/>
+                                        <constraint firstItem="UNp-Yl-1O8" firstAttribute="top" secondItem="K8S-Fk-p5v" secondAttribute="topMargin" id="dLp-75-hMP"/>
+                                        <constraint firstItem="UNp-Yl-1O8" firstAttribute="leading" secondItem="v3c-jC-aFh" secondAttribute="trailing" constant="8" id="emc-Jr-NLM"/>
+                                        <constraint firstItem="UNp-Yl-1O8" firstAttribute="trailing" secondItem="K8S-Fk-p5v" secondAttribute="trailingMargin" id="h4x-yM-ukb"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="UNp-Yl-1O8" secondAttribute="bottom" constant="4" id="vCE-Ac-WfA"/>
+                                        <constraint firstItem="WWZ-S6-aAN" firstAttribute="top" secondItem="UNp-Yl-1O8" secondAttribute="bottom" constant="-35" id="yYG-Rc-Ugj"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="emc-Jr-NLM"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="GalaxyItemImageView" destination="v3c-jC-aFh" id="A3n-f4-mVc"/>
+                                    <outlet property="GalaxyItemPriceLabel" destination="WWZ-S6-aAN" id="uFe-rb-8iH"/>
+                                    <outlet property="GalaxyItemTextView" destination="UNp-Yl-1O8" id="bOu-KX-ktY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rQP-SK-Dm8" id="zwx-rV-piR"/>
+                            <outlet property="delegate" destination="rQP-SK-Dm8" id="dSw-U2-jio"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Galaxy Market" id="mMG-Ho-i4n"/>
+                    <connections>
+                        <segue destination="neS-qg-POY" kind="show" identifier="detailSegue" id="7cR-ub-aUk"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ESu-dn-w3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="217"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="BTR-Jt-acc">
+            <objects>
+                <viewController id="neS-qg-POY" customClass="DetailViewController" customModule="GalaxyMarket" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V5y-Ov-KjG"/>
+                        <viewControllerLayoutGuide type="bottom" id="ok5-tB-wgg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z1d-bt-7BS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GIGalaxy.png" translatesAutoresizingMaskIntoConstraints="NO" id="5hX-Ol-ksg">
+                                <rect key="frame" x="-9" y="-8" width="609" height="608"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GIBountyHunter.png" translatesAutoresizingMaskIntoConstraints="NO" id="gfd-aO-sP3">
+                                <rect key="frame" x="16" y="95" width="568" height="261"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CM7-Qh-UE2">
+                                <rect key="frame" x="225" y="530" width="140" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="Qgf-R2-xIC"/>
+                                </constraints>
+                                <state key="normal" image="ApplePayBTN_50pt__white_logo_.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="purchase:" destination="neS-qg-POY" eventType="touchUpInside" id="5wG-Jn-OQa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5hX-Ol-ksg" secondAttribute="trailing" id="4eV-CD-L4j"/>
+                            <constraint firstItem="CM7-Qh-UE2" firstAttribute="top" secondItem="5hX-Ol-ksg" secondAttribute="bottom" constant="-70" id="9fR-Fn-Zs7"/>
+                            <constraint firstItem="5hX-Ol-ksg" firstAttribute="bottom" secondItem="ok5-tB-wgg" secondAttribute="top" id="MzJ-ci-xRr"/>
+                            <constraint firstItem="5hX-Ol-ksg" firstAttribute="top" secondItem="Z1d-bt-7BS" secondAttribute="topMargin" constant="-8" id="O7Y-51-elt"/>
+                            <constraint firstItem="gfd-aO-sP3" firstAttribute="top" secondItem="V5y-Ov-KjG" secondAttribute="bottom" constant="31" id="b2d-5R-bIJ"/>
+                            <constraint firstItem="ok5-tB-wgg" firstAttribute="top" secondItem="gfd-aO-sP3" secondAttribute="bottom" constant="244" id="dqr-K4-teA"/>
+                            <constraint firstItem="CM7-Qh-UE2" firstAttribute="centerX" secondItem="5hX-Ol-ksg" secondAttribute="centerX" constant="-0.5" id="gn3-hd-xvZ"/>
+                            <constraint firstItem="gfd-aO-sP3" firstAttribute="trailing" secondItem="Z1d-bt-7BS" secondAttribute="trailingMargin" id="hRv-4x-pHF"/>
+                            <constraint firstItem="5hX-Ol-ksg" firstAttribute="leading" secondItem="Z1d-bt-7BS" secondAttribute="leadingMargin" constant="-25" id="oR6-EP-N3K"/>
+                            <constraint firstItem="gfd-aO-sP3" firstAttribute="leading" secondItem="Z1d-bt-7BS" secondAttribute="leadingMargin" id="tdl-Fy-XMH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dImage" destination="gfd-aO-sP3" id="9dB-LH-mRs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ej6-Jz-5Xo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1610" y="217"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cgm-JU-uXS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6QW-iy-00I" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r2F-je-GVh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rQP-SK-Dm8" kind="relationship" relationship="rootViewController" id="zIA-QD-gMT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a3x-Tv-fFF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112" y="217"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ApplePayBTN_50pt__white_logo_.png" width="140" height="50"/>
+        <image name="GIBountyHunter.png" width="1000" height="800"/>
+        <image name="GIGalaxy.png" width="1280" height="599"/>
+    </resources>
+</document>

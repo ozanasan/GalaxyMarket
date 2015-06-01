@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		90FEB33137F79E30E42C138D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 897D35B0720DD370C3208B75 /* libPods.a */; };
+		E7B874BD1B1425D500BF0507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B874BC1B1425D500BF0507 /* AppDelegate.swift */; };
+		E7B874C01B1425D500BF0507 /* GalaxyMarket.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7B874BE1B1425D500BF0507 /* GalaxyMarket.xcdatamodeld */; };
+		E7B874C51B1425D500BF0507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B874C31B1425D500BF0507 /* Main.storyboard */; };
+		E7B874C71B1425D500BF0507 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B874C61B1425D500BF0507 /* Images.xcassets */; };
+		E7B874CA1B1425D500BF0507 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7B874C81B1425D500BF0507 /* LaunchScreen.xib */; };
+		E7B874D61B1425D500BF0507 /* GalaxyMarketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B874D51B1425D500BF0507 /* GalaxyMarketTests.swift */; };
+		E7B874E01B1426E800BF0507 /* GalaxyMarketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B874DF1B1426E800BF0507 /* GalaxyMarketTableViewController.swift */; };
+		E7B874EC1B14389D00BF0507 /* GalaxyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B874EB1B14389D00BF0507 /* GalaxyItem.swift */; };
+		E7B874EE1B1439BA00BF0507 /* DataFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B874ED1B1439BA00BF0507 /* DataFacade.swift */; };
+		E7B874F41B143E0400BF0507 /* GIStormTrooper.png in Resources */ = {isa = PBXBuildFile; fileRef = E7B874F11B143E0400BF0507 /* GIStormTrooper.png */; };
+		E7B874F51B143E0400BF0507 /* GIBountyHunter.png in Resources */ = {isa = PBXBuildFile; fileRef = E7B874F21B143E0400BF0507 /* GIBountyHunter.png */; };
+		E7B874F61B143E0400BF0507 /* GIJedi.png in Resources */ = {isa = PBXBuildFile; fileRef = E7B874F31B143E0400BF0507 /* GIJedi.png */; };
+		E7B874F81B14438D00BF0507 /* GalaxyItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B874F71B14438D00BF0507 /* GalaxyItemCell.swift */; };
+		E7B874FA1B14461300BF0507 /* ApplePayBTN_50pt__white_logo_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7B874F91B14461300BF0507 /* ApplePayBTN_50pt__white_logo_@2x.png */; };
+		E7B875021B15600100BF0507 /* GIPilot.png in Resources */ = {isa = PBXBuildFile; fileRef = E7B875011B15600100BF0507 /* GIPilot.png */; };
+		E7B875041B15600700BF0507 /* GISmuggler.png in Resources */ = {isa = PBXBuildFile; fileRef = E7B875031B15600700BF0507 /* GISmuggler.png */; };
+		E7B875081B15610800BF0507 /* GIEwk.png in Resources */ = {isa = PBXBuildFile; fileRef = E7B875071B15610800BF0507 /* GIEwk.png */; };
+		E7B8750D1B156F4500BF0507 /* GIAtat.png in Resources */ = {isa = PBXBuildFile; fileRef = E7B875091B156F4500BF0507 /* GIAtat.png */; };
+		E7B8750E1B156F4500BF0507 /* GIDeathstar.png in Resources */ = {isa = PBXBuildFile; fileRef = E7B8750A1B156F4500BF0507 /* GIDeathstar.png */; };
+		E7B8750F1B156F4500BF0507 /* GIStardestroyer.png in Resources */ = {isa = PBXBuildFile; fileRef = E7B8750B1B156F4500BF0507 /* GIStardestroyer.png */; };
+		E7B875101B156F4500BF0507 /* GIXwing.png in Resources */ = {isa = PBXBuildFile; fileRef = E7B8750C1B156F4500BF0507 /* GIXwing.png */; };
+		E7B875121B15856B00BF0507 /* GIGalaxy.png in Resources */ = {isa = PBXBuildFile; fileRef = E7B875111B15856B00BF0507 /* GIGalaxy.png */; };
+		E7B875141B1586DD00BF0507 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B875131B1586DD00BF0507 /* DetailViewController.swift */; };
+		E7B8751A1B166E2600BF0507 /* ShippingMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B875191B166E2600BF0507 /* ShippingMethods.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E7B874D01B1425D500BF0507 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7B874AF1B1425D500BF0507 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7B874B61B1425D500BF0507;
+			remoteInfo = GalaxyMarket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		349F49FBBBEA4CC8E8C0186D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		897D35B0720DD370C3208B75 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B874B71B1425D500BF0507 /* GalaxyMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalaxyMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B874BB1B1425D500BF0507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7B874BC1B1425D500BF0507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E7B874BF1B1425D500BF0507 /* GalaxyMarket.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GalaxyMarket.xcdatamodel; sourceTree = "<group>"; };
+		E7B874C41B1425D500BF0507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E7B874C61B1425D500BF0507 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E7B874C91B1425D500BF0507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E7B874CF1B1425D500BF0507 /* GalaxyMarketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalaxyMarketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B874D41B1425D500BF0507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7B874D51B1425D500BF0507 /* GalaxyMarketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxyMarketTests.swift; sourceTree = "<group>"; };
+		E7B874DF1B1426E800BF0507 /* GalaxyMarketTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalaxyMarketTableViewController.swift; sourceTree = "<group>"; };
+		E7B874EB1B14389D00BF0507 /* GalaxyItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalaxyItem.swift; sourceTree = "<group>"; };
+		E7B874ED1B1439BA00BF0507 /* DataFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFacade.swift; sourceTree = "<group>"; };
+		E7B874F11B143E0400BF0507 /* GIStormTrooper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GIStormTrooper.png; sourceTree = "<group>"; };
+		E7B874F21B143E0400BF0507 /* GIBountyHunter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GIBountyHunter.png; sourceTree = "<group>"; };
+		E7B874F31B143E0400BF0507 /* GIJedi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GIJedi.png; sourceTree = "<group>"; };
+		E7B874F71B14438D00BF0507 /* GalaxyItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalaxyItemCell.swift; sourceTree = "<group>"; };
+		E7B874F91B14461300BF0507 /* ApplePayBTN_50pt__white_logo_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ApplePayBTN_50pt__white_logo_@2x.png"; sourceTree = "<group>"; };
+		E7B875011B15600100BF0507 /* GIPilot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GIPilot.png; sourceTree = "<group>"; };
+		E7B875031B15600700BF0507 /* GISmuggler.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GISmuggler.png; sourceTree = "<group>"; };
+		E7B875071B15610800BF0507 /* GIEwk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GIEwk.png; sourceTree = "<group>"; };
+		E7B875091B156F4500BF0507 /* GIAtat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GIAtat.png; sourceTree = "<group>"; };
+		E7B8750A1B156F4500BF0507 /* GIDeathstar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GIDeathstar.png; sourceTree = "<group>"; };
+		E7B8750B1B156F4500BF0507 /* GIStardestroyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GIStardestroyer.png; sourceTree = "<group>"; };
+		E7B8750C1B156F4500BF0507 /* GIXwing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GIXwing.png; sourceTree = "<group>"; };
+		E7B875111B15856B00BF0507 /* GIGalaxy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GIGalaxy.png; sourceTree = "<group>"; };
+		E7B875131B1586DD00BF0507 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E7B875151B1632C500BF0507 /* GalaxyMarket.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GalaxyMarket.entitlements; sourceTree = "<group>"; };
+		E7B875161B16347B00BF0507 /* GalaxyMarket-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GalaxyMarket-Bridging-Header.h"; sourceTree = "<group>"; };
+		E7B875191B166E2600BF0507 /* ShippingMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShippingMethods.swift; path = ../ShippingMethods.swift; sourceTree = "<group>"; };
+		EDF3F0F7562FE5C55E36EB80 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E7B874B41B1425D500BF0507 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90FEB33137F79E30E42C138D /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7B874CC1B1425D500BF0507 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29B5878422DD7F12A1909735 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				897D35B0720DD370C3208B75 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64FA010ECED341BDCB1C6524 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDF3F0F7562FE5C55E36EB80 /* Pods.debug.xcconfig */,
+				349F49FBBBEA4CC8E8C0186D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E7B874AE1B1425D500BF0507 = {
+			isa = PBXGroup;
+			children = (
+				E7B874B91B1425D500BF0507 /* GalaxyMarket */,
+				E7B874D21B1425D500BF0507 /* GalaxyMarketTests */,
+				E7B874B81B1425D500BF0507 /* Products */,
+				64FA010ECED341BDCB1C6524 /* Pods */,
+				29B5878422DD7F12A1909735 /* Frameworks */,
+				E7B875161B16347B00BF0507 /* GalaxyMarket-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+		E7B874B81B1425D500BF0507 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7B874B71B1425D500BF0507 /* GalaxyMarket.app */,
+				E7B874CF1B1425D500BF0507 /* GalaxyMarketTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7B874B91B1425D500BF0507 /* GalaxyMarket */ = {
+			isa = PBXGroup;
+			children = (
+				E7B875151B1632C500BF0507 /* GalaxyMarket.entitlements */,
+				E7B875191B166E2600BF0507 /* ShippingMethods.swift */,
+				E7B874BC1B1425D500BF0507 /* AppDelegate.swift */,
+				E7B875131B1586DD00BF0507 /* DetailViewController.swift */,
+				E7B874ED1B1439BA00BF0507 /* DataFacade.swift */,
+				E7B874EB1B14389D00BF0507 /* GalaxyItem.swift */,
+				E7B874F71B14438D00BF0507 /* GalaxyItemCell.swift */,
+				E7B874C31B1425D500BF0507 /* Main.storyboard */,
+				E7B874DF1B1426E800BF0507 /* GalaxyMarketTableViewController.swift */,
+				E7B874C61B1425D500BF0507 /* Images.xcassets */,
+				E7B874C81B1425D500BF0507 /* LaunchScreen.xib */,
+				E7B874BE1B1425D500BF0507 /* GalaxyMarket.xcdatamodeld */,
+				E7B874BA1B1425D500BF0507 /* Supporting Files */,
+			);
+			path = GalaxyMarket;
+			sourceTree = "<group>";
+		};
+		E7B874BA1B1425D500BF0507 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E7B875111B15856B00BF0507 /* GIGalaxy.png */,
+				E7B874F11B143E0400BF0507 /* GIStormTrooper.png */,
+				E7B875091B156F4500BF0507 /* GIAtat.png */,
+				E7B8750A1B156F4500BF0507 /* GIDeathstar.png */,
+				E7B8750B1B156F4500BF0507 /* GIStardestroyer.png */,
+				E7B8750C1B156F4500BF0507 /* GIXwing.png */,
+				E7B875031B15600700BF0507 /* GISmuggler.png */,
+				E7B875011B15600100BF0507 /* GIPilot.png */,
+				E7B875071B15610800BF0507 /* GIEwk.png */,
+				E7B874F91B14461300BF0507 /* ApplePayBTN_50pt__white_logo_@2x.png */,
+				E7B874F21B143E0400BF0507 /* GIBountyHunter.png */,
+				E7B874F31B143E0400BF0507 /* GIJedi.png */,
+				E7B874BB1B1425D500BF0507 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7B874D21B1425D500BF0507 /* GalaxyMarketTests */ = {
+			isa = PBXGroup;
+			children = (
+				E7B874D51B1425D500BF0507 /* GalaxyMarketTests.swift */,
+				E7B874D31B1425D500BF0507 /* Supporting Files */,
+			);
+			path = GalaxyMarketTests;
+			sourceTree = "<group>";
+		};
+		E7B874D31B1425D500BF0507 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E7B874D41B1425D500BF0507 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E7B874B61B1425D500BF0507 /* GalaxyMarket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7B874D91B1425D500BF0507 /* Build configuration list for PBXNativeTarget "GalaxyMarket" */;
+			buildPhases = (
+				636BA68CFB2FCA5EF1F1ED61 /* Check Pods Manifest.lock */,
+				E7B874B31B1425D500BF0507 /* Sources */,
+				E7B874B41B1425D500BF0507 /* Frameworks */,
+				E7B874B51B1425D500BF0507 /* Resources */,
+				E590BBF02572A1E12AA2AA5F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GalaxyMarket;
+			productName = GalaxyMarket;
+			productReference = E7B874B71B1425D500BF0507 /* GalaxyMarket.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E7B874CE1B1425D500BF0507 /* GalaxyMarketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7B874DC1B1425D500BF0507 /* Build configuration list for PBXNativeTarget "GalaxyMarketTests" */;
+			buildPhases = (
+				E7B874CB1B1425D500BF0507 /* Sources */,
+				E7B874CC1B1425D500BF0507 /* Frameworks */,
+				E7B874CD1B1425D500BF0507 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7B874D11B1425D500BF0507 /* PBXTargetDependency */,
+			);
+			name = GalaxyMarketTests;
+			productName = GalaxyMarketTests;
+			productReference = E7B874CF1B1425D500BF0507 /* GalaxyMarketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7B874AF1B1425D500BF0507 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = OzanAsan;
+				TargetAttributes = {
+					E7B874B61B1425D500BF0507 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 6TKAVHE294;
+						SystemCapabilities = {
+							com.apple.OMC = {
+								enabled = 1;
+							};
+						};
+					};
+					E7B874CE1B1425D500BF0507 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = E7B874B61B1425D500BF0507;
+					};
+				};
+			};
+			buildConfigurationList = E7B874B21B1425D500BF0507 /* Build configuration list for PBXProject "GalaxyMarket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E7B874AE1B1425D500BF0507;
+			productRefGroup = E7B874B81B1425D500BF0507 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E7B874B61B1425D500BF0507 /* GalaxyMarket */,
+				E7B874CE1B1425D500BF0507 /* GalaxyMarketTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E7B874B51B1425D500BF0507 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7B875041B15600700BF0507 /* GISmuggler.png in Resources */,
+				E7B874F51B143E0400BF0507 /* GIBountyHunter.png in Resources */,
+				E7B8750F1B156F4500BF0507 /* GIStardestroyer.png in Resources */,
+				E7B874FA1B14461300BF0507 /* ApplePayBTN_50pt__white_logo_@2x.png in Resources */,
+				E7B875081B15610800BF0507 /* GIEwk.png in Resources */,
+				E7B874C51B1425D500BF0507 /* Main.storyboard in Resources */,
+				E7B874F41B143E0400BF0507 /* GIStormTrooper.png in Resources */,
+				E7B875101B156F4500BF0507 /* GIXwing.png in Resources */,
+				E7B8750E1B156F4500BF0507 /* GIDeathstar.png in Resources */,
+				E7B874CA1B1425D500BF0507 /* LaunchScreen.xib in Resources */,
+				E7B874C71B1425D500BF0507 /* Images.xcassets in Resources */,
+				E7B875121B15856B00BF0507 /* GIGalaxy.png in Resources */,
+				E7B8750D1B156F4500BF0507 /* GIAtat.png in Resources */,
+				E7B875021B15600100BF0507 /* GIPilot.png in Resources */,
+				E7B874F61B143E0400BF0507 /* GIJedi.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7B874CD1B1425D500BF0507 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		636BA68CFB2FCA5EF1F1ED61 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E590BBF02572A1E12AA2AA5F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7B874B31B1425D500BF0507 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7B874EC1B14389D00BF0507 /* GalaxyItem.swift in Sources */,
+				E7B874BD1B1425D500BF0507 /* AppDelegate.swift in Sources */,
+				E7B874E01B1426E800BF0507 /* GalaxyMarketTableViewController.swift in Sources */,
+				E7B874EE1B1439BA00BF0507 /* DataFacade.swift in Sources */,
+				E7B874F81B14438D00BF0507 /* GalaxyItemCell.swift in Sources */,
+				E7B874C01B1425D500BF0507 /* GalaxyMarket.xcdatamodeld in Sources */,
+				E7B8751A1B166E2600BF0507 /* ShippingMethods.swift in Sources */,
+				E7B875141B1586DD00BF0507 /* DetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7B874CB1B1425D500BF0507 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7B874D61B1425D500BF0507 /* GalaxyMarketTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E7B874D11B1425D500BF0507 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7B874B61B1425D500BF0507 /* GalaxyMarket */;
+			targetProxy = E7B874D01B1425D500BF0507 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E7B874C31B1425D500BF0507 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7B874C41B1425D500BF0507 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E7B874C81B1425D500BF0507 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7B874C91B1425D500BF0507 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E7B874D71B1425D500BF0507 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E7B874D81B1425D500BF0507 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7B874DA1B1425D500BF0507 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDF3F0F7562FE5C55E36EB80 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = GalaxyMarket/GalaxyMarket.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					STRIPE_ENABLE_APPLEPAY,
+				);
+				INFOPLIST_FILE = GalaxyMarket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "GalaxyMarket-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E7B874DB1B1425D500BF0507 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 349F49FBBBEA4CC8E8C0186D /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = GalaxyMarket/GalaxyMarket.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					STRIPE_ENABLE_APPLEPAY,
+				);
+				INFOPLIST_FILE = GalaxyMarket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "GalaxyMarket-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		E7B874DD1B1425D500BF0507 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GalaxyMarketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GalaxyMarket.app/GalaxyMarket";
+			};
+			name = Debug;
+		};
+		E7B874DE1B1425D500BF0507 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GalaxyMarketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GalaxyMarket.app/GalaxyMarket";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E7B874B21B1425D500BF0507 /* Build configuration list for PBXProject "GalaxyMarket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7B874D71B1425D500BF0507 /* Debug */,
+				E7B874D81B1425D500BF0507 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7B874D91B1425D500BF0507 /* Build configuration list for PBXNativeTarget "GalaxyMarket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7B874DA1B1425D500BF0507 /* Debug */,
+				E7B874DB1B1425D500BF0507 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7B874DC1B1425D500BF0507 /* Build configuration list for PBXNativeTarget "GalaxyMarketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7B874DD1B1425D500BF0507 /* Debug */,
+				E7B874DE1B1425D500BF0507 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E7B874BE1B1425D500BF0507 /* GalaxyMarket.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E7B874BF1B1425D500BF0507 /* GalaxyMarket.xcdatamodel */,
+			);
+			currentVersion = E7B874BF1B1425D500BF0507 /* GalaxyMarket.xcdatamodel */;
+			path = GalaxyMarket.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E7B874AF1B1425D500BF0507 /* Project object */;
+}

@@ -1,0 +1,15 @@
+PODS:
+  - ApplePayStubs (0.2)
+  - Stripe/ApplePay (4.0.3):
+    - Stripe/Core
+  - Stripe/Core (4.0.3)
+
+DEPENDENCIES:
+  - ApplePayStubs
+  - Stripe/ApplePay
+
+SPEC CHECKSUMS:
+  ApplePayStubs: 5dd63c36527d1117b2045939fb5b6581b4815433
+  Stripe: 43a4307dc789483a61668d187c4a917d1348b0b6
+
+COCOAPODS: 0.36.1
