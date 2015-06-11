@@ -247,6 +247,9 @@
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = 6TKAVHE294;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.OMC = {
 								enabled = 1;
 							};

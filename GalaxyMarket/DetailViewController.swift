@@ -9,7 +9,6 @@
 import UIKit
 import PassKit
 
-
 class DetailViewController: UIViewController, PKPaymentAuthorizationViewControllerDelegate {
     
     let SupportedPaymentNetworks = [PKPaymentNetworkVisa, PKPaymentNetworkMasterCard, PKPaymentNetworkAmex]
@@ -94,15 +93,17 @@ class DetailViewController: UIViewController, PKPaymentAuthorizationViewControll
         
         
         if let GalaxyItem = DetailItem {
-            paymentRequest.paymentSummaryItems = [ PKPaymentSummaryItem(label: GalaxyItem.ItemName, amount: NSDecimalNumber(integer: GalaxyItem.ItemPrice)), PKPaymentSummaryItem(label: "Shipping", amount : 4), PKPaymentSummaryItem(label : "Galaxy Market", amount: NSDecimalNumber(integer: GalaxyItem.ItemPrice + 4) ) ]
+            paymentRequest.paymentSummaryItems = [ PKPaymentSummaryItem(label: GalaxyItem.ItemName, amount: NSDecimalNumber(integer: GalaxyItem.ItemPrice)), PKPaymentSummaryItem(label: "Shipping", amount : 5), PKPaymentSummaryItem(label : "Galaxy Market", amount: NSDecimalNumber(integer: GalaxyItem.ItemPrice + 4) ) ]
         }
         
         
         // TRying
         
         let freeAmount = NSDecimalNumber(integer: 0)
-        let freeShipping  : PKShippingMethod = PKShippingMethod(label: "Free Shipping", amount: 5)
-        paymentRequest.shippingMethods = [freeShipping ]
+        let fastAmount = NSDecimalNumber(integer: 5)
+        let freeShipping  : PKShippingMethod = PKShippingMethod(label: "Free Shipping", amount: freeAmount)
+        let fastShipping  : PKShippingMethod = PKShippingMethod(label: "Shipping", amount: fastAmount)
+        paymentRequest.shippingMethods = [fastShipping]
         
         /*
         NSDecimalNumber *freeAmount = [NSDecimalNumber decimalNumberWithString:@"0.00"];
@@ -122,17 +123,17 @@ class DetailViewController: UIViewController, PKPaymentAuthorizationViewControll
         
         paymentRequest.shippingMethods = @[freeShipping, standardShipping, expressShipping];
         
-        paymentRequest.shippingMethods = []
+        
         
         */
 
         //with apple examoek
         
-        
+        //paymentRequest.shippingMethods = []
         
         
         let applePayController = STPTestPaymentAuthorizationViewController(paymentRequest: paymentRequest)
-        //let applePayController = PKPaymentAuthorizationViewController(paymentRequest: paymentRequest))
+        //let applePayController = PKPaymentAuthorizationViewController(paymentRequest: paymentRequest)
         applePayController.delegate = self
         self.presentViewController(applePayController, animated: true, completion: nil)
     }

@@ -7,39 +7,141 @@
 //
 
 import UIKit
+import CoreLocation
+import CoreBluetooth
 
-class GalaxyMarketTableViewController: UITableViewController {
+class GalaxyMarketTableViewController: UITableViewController, CLLocationManagerDelegate {
+    
+    
+    // For the locations...
+    let beaconUUID = NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")
+    let major :CLBeaconMajorValue = 47811
+    let regionidentifier = "one"
+    let mylocationmanager = CLLocationManager()
+    let regionOne = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D"), major: 47811, identifier: "one")
     
     var GalaxyItems : [GalaxyItem] = []
+    
+    var immediateEntranceCount = 0 {
+        didSet {
+            didSetThisEntrance = true
+            if(immediateEntranceCount == 3){
+                immediateEntranceCount = 0
+                rangeCountInImmediate = 0
+                takeActionForRange()
+            }
+        }
+    }
+    
+    var didSetThisEntrance = false
+    
+    var rangeCountInImmediate = 0 {
+        didSet {
+            
+        }
+    }
+    
+    func resetRanging(){
+        immediateEntranceCount = 0
+        rangeCountInImmediate = 0
+        self.mylocationmanager.stopRangingBeaconsInRegion(regionOne)
+        
+    }
+    
+    func takeActionForRange() {
+        if(UIApplication.sharedApplication().applicationState == UIApplicationState.Background) {
+            println("you are in the background and you have to fire an notification!!!")
+            fireNotification()
+        }
+        
+        else if(UIApplication.sharedApplication().applicationState == UIApplicationState.Active) {
+            println("you are in foregorund and you have to segue!!!")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureLocationManager()
+        
         
         
         self.GalaxyItems = GetGalaxyItems()
         
+        
+    }
+    
+    func configureLocationManager() {
+        self.mylocationmanager.delegate = self
+        regionOne.notifyEntryStateOnDisplay = true
+        mylocationmanager.requestAlwaysAuthorization()
+        
+        if(CLLocationManager.authorizationStatus() != CLAuthorizationStatus.AuthorizedAlways){
+            mylocationmanager.requestWhenInUseAuthorization()
+        }
+        
+        mylocationmanager.requestStateForRegion(regionOne)
     }
     
     func updateUI() {
         self.tableView.reloadData()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func locationManager(manager: CLLocationManager!, didRangeBeacons beacons: [AnyObject]!, inRegion region: CLBeaconRegion!) {
+        println("did range for beacons?")
+        
+        if(beacons.count > 0){
+            var beacon = beacons[0] as! CLBeacon
+            
+            if(region.identifier == regionidentifier && beacon.major == NSNumber(unsignedShort : major)){
+                if(self.checkProximity(beacon.proximity)){
+                    println("beacon.proximity == .Immediate")
+                    if(!didSetThisEntrance) {
+                        rangeCountInImmediate++
+                        println("count is: \(rangeCountInImmediate)")
+                        if(rangeCountInImmediate > 1){
+                            
+                            immediateEntranceCount++
+                            
+                            println("------level up... immediate entrance count is: \(immediateEntranceCount)")
+                        }
+                    }
+                }
+                else {
+                    rangeCountInImmediate = 0
+                }
+            }
+        }
+    }
+    
+    private func checkProximity(proximity: CLProximity ) -> Bool {
+        if(proximity == .Immediate){
+            return true
+        }
+        else {
+            return false;
+        }
+        
+    }
+    
+    func locationManager(manager: CLLocationManager!, didDetermineState state: CLRegionState, forRegion region: CLRegion!) {
+        println("didDetermineState")
+        if(region.identifier == regionidentifier) {
+            if(state == CLRegionState.Inside){
+                println("**in didDetermineState: state == CLRegionState.Inside")
+                didSetThisEntrance = false
+                self.mylocationmanager.startRangingBeaconsInRegion(regionOne)
+            }
+        }
     }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
         return self.GalaxyItems.count
     }
 
@@ -57,8 +159,6 @@ class GalaxyMarketTableViewController: UITableViewController {
         return cell
     }
     
-    
-    
     let detailSegue = "detailSegue"
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -72,53 +172,13 @@ class GalaxyMarketTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.mylocationmanager.stopRangingBeaconsInRegion(regionOne)
         performSegueWithIdentifier(detailSegue, sender: self)
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
+    func fireNotification() {
+        let notification = UILocalNotification()
+        notification.alertBody = "Are you interested in some Galaxy Items?"
+        UIApplication.sharedApplication().presentLocalNotificationNow(notification)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
